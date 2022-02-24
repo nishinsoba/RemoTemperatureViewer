@@ -45,14 +45,14 @@ class TimePickerFragment : DialogFragment(), TimePickerDialog.OnTimeSetListener{
             val calendar = model.from.value
             calendar?.let {
                 it.set(Calendar.HOUR_OF_DAY,hourOfDay)
-                it.set(Calendar.MILLISECOND,minute)
+                it.set(Calendar.MINUTE,minute)
                 model.updateFromCalender(it)
             }
         }else if (tag == "TO_TIME"){
             val calendar = model.to.value
             calendar?.let {
                 it.set(Calendar.HOUR_OF_DAY,hourOfDay)
-                it.set(Calendar.MILLISECOND,minute)
+                it.set(Calendar.MINUTE,minute)
                 model.updateToCalender(it)
             }
         }
